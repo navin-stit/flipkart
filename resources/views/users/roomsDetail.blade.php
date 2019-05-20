@@ -20,7 +20,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Rooms</th>                      
                         <th scope="col">Images</th>
-                          <th scope="col">Defects</th>
+                        <th scope="col">Defects</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -31,14 +31,19 @@
                         <td>{{ $room->room_number }}</td>
                         <td>
                             @if( !empty( $room->roomsImages ))
-                            <img src="{{ $room->roomsImages->images  }}" width="50px">
+                            <img src="{{ $room->roomsImages->images  }}" width="100px" class="rounded">
                             @else 
                             <img src="{{ asset('img/images/default-product-img.jpg') }}" width="100px">
                             @endif
                         </td>
                         <td>{{ $room->defects }}</td>
-                        <td>                       
-                            <a href="javascript:void(0)" room_id="{{ $room->id }}" id="delete" class="btn-floating btn-sm purple-gradient"><i class="fas fa-trash" aria-hidden="true"></i></a>
+                        <td>  
+                            <a href="javascript:void(0)" edit_id="{{ $room->id }}" id="edit-data"  class="btn-floating btn-sm cyan">
+                                <i class="fas fa-edit pl-1"></i>
+                            </a>
+                            <a href="javascript:void(0)" room_id="{{ $room->id }}" id="delete" class="btn-floating btn-sm purple-gradient">
+                                <i class="fas fa-trash" aria-hidden="true"></i>
+                            </a>
 
                         </td>
                     </tr>           

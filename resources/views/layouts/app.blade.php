@@ -20,7 +20,8 @@
         <!-- Bootstrap core CSS -->
         <link href="{{ asset ('css/bootstrap.min.css') }}" rel="stylesheet">
         <!-- Material Design Bootstrap -->
-        <link href="{{ asset('css/compiled-4.7.6.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/compiled-4.8.0.min.css') }}" rel="stylesheet">
+
         <!-- Your custom styles (optional) -->
         <link href="{{ asset ('css/style.min.css') }}" rel="stylesheet">
 
@@ -39,30 +40,63 @@
         <script type="text/javascript" src="{{ asset ('js/modules/forms-free.js') }}"></script>  
         <!--Custom Javascript-->
         <script type="text/javascript" src="{{ asset ('js/script.js') }}"></script> 
-         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script> 
-        
-
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script> 
         <script>
-var titleArray = ['Laravel', 'Enjoy the Framework..!!!'];
-var titleLenght = titleArray.length;
-var i = 0;
-setInterval(titleChange, 4000);
-function titleChange() {
 
-    if (i == 2)
-    {
-        i = 0;
-    }
-    document.
-            title = titleArray[i];
-    i++;
-}
+// SideNav Button Initialization
+$(".button-collapse").sideNav();
+// SideNav Scrollbar Initialization
+var sideNavScrollbar = document.querySelector('.custom-scrollbar');
+var ps = new PerfectScrollbar(sideNavScrollbar);
+// Show sideNav
+$('.button-collapse').side-nav('show');
+// Hide sideNav
+$('.button-collapse').sideNav('hide');
+        </script>
+        <script>
+            function addRoom(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#roomImage').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            function imageChange(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#changeImage').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        </script>
+        <script>
+            var titleArray = ['Laravel', 'Enjoy the Framework..!!!'];
+            var titleLenght = titleArray.length;
+            var i = 0;
+            setInterval(titleChange, 4000);
+            function titleChange() {
+
+                if (i == 2)
+                {
+                    i = 0;
+                }
+                document.
+                        title = titleArray[i];
+                i++;
+            }
 
         </script>
         <style>
             a{letter-spacing: 1px}
 
         </style>
+
     </head>
     <body>
         <div id="app">
@@ -79,5 +113,6 @@ function titleChange() {
             var webUrl = {!! json_encode(url('/')) !!}
             ;
         </script>
+
     </body>
 </html>

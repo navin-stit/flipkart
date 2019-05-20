@@ -5,7 +5,7 @@
             <url>resources/views/layouts/app.blade.php</url>
             <bookmark id="1">
                 <name/>
-                <line>78</line>
+                <line>112</line>
                 <key/>
             </bookmark>
         </file>
@@ -14,12 +14,11 @@
         <group>
             <file>file:/C:/xampp/htdocs/flipkart/public/js/script.js</file>
             <file>file:/C:/xampp/htdocs/flipkart/app/Http/Controllers/ActivityLog.php</file>
-            <file>file:/C:/xampp/htdocs/flipkart/config/app.php</file>
-            <file>file:/C:/xampp/htdocs/flipkart/resources/views/home.blade.php</file>
             <file>file:/C:/xampp/htdocs/flipkart/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/flipkart/resources/views/sideNav.blade.php</file>
+            <file>file:/C:/xampp/htdocs/flipkart/resources/views/layouts/app.blade.php</file>
             <file>file:/C:/xampp/htdocs/flipkart/resources/views/layouts/elements/modal.blade.php</file>
             <file>file:/C:/xampp/htdocs/flipkart/resources/views/users/roomsDetail.blade.php</file>
-            <file>file:/C:/xampp/htdocs/flipkart/app/Models/Rooms.php</file>
         </group>
     </open-files>
 </project-private>

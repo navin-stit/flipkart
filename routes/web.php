@@ -25,3 +25,7 @@ Route::post('add-data', 'ActivityLog@add_rooms')->name('add-data');
 Route::post('add-defects','ActivityLog@addDefects')->name('add-defects');
 Route::get('rooms-detail','ActivityLog@showRooms')->name('rooms-detail');
 Route::delete('delete-room','ActivityLog@destroy');
+Route::get('edit-details', 'ActivityLog@editRooms')->name('edit-details');
+Route::post('update', 'ActivityLog@updateRooms')->name('update');
+
+Route::get('sidenav','ActivityLog@sidenav')->name('sidenav');
