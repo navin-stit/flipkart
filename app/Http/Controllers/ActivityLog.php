@@ -18,9 +18,6 @@ class ActivityLog extends Controller {
         return view('sideNav');
     }
 
-
-
-
     public function showActivityLog() {
         $rooms = Rooms::select('*')
                 ->with('roomsImages')

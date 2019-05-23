@@ -23,7 +23,7 @@
                         <th scope="col">Defects</th>
                         <th scope="col">Action</th>
                     </tr>
-                </thead>
+                    
                 <tbody class="append">
                     @foreach($rooms as $room)
                     <tr>

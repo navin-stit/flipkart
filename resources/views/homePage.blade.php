@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('content')
 
+<!--@unless (Auth::check())
+    You are not signed in.
+    @endunless-->
 <div class="container">
     <div class="row">
         <div class="col-4">
